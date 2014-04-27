@@ -62,7 +62,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	max-width:100%;
 	vertical-align: baseline;
 }
 html {
@@ -123,7 +122,7 @@ a img {
 }
 
 /*--------------------------------------------------------------
-2.0 Typography, Width
+2.0 Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -134,10 +133,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1;
-	font-family: arial;
-	width:90%;
-	margin:0 2.5%;
-	background:#939;
+	font-family: Prelo, arial;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -363,92 +359,34 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-.main-navigation{
+/*.main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
-	text-align:center;
-	background:#999;
-	position:relative;
-	margin-bottom:1.2vw;
-	left:2.6vw;
-}
-.main-navigation:after{
-	content:"";
-	width:100%;
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	left:.6vw;
-	top:100%;
-	background:#aaa;
-}
-
-.main-navigation a{
-	color:inherit;
-	text-decoration:none;
 }
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	float:right;
 }
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding:0.5em 1em;
-	background:#999;
-	position:relative;
-
-}
-.main-navigation li:hover:before{
-	content:"";
-	width:100%;
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	right:.6vw;
-	bottom:100%;
-	background:#aba;
-}
-.main-navigation li:after{
-	content:"";
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	left:.6vw;
-	top:100%;
-	width:100%;
-	background:#aaa;
-}
-.main-navigation li:hover:after{
-	content:"";
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	left:.6vw;
-	top:100%;
-	background:#ada;
-	z-index:2;
-}
-.main-navigation li:hover{
-	background:#ddd;
 }
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-}
+}*/
 .main-navigation ul ul {
-	//box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
 	position: absolute;
-	top: 2em;
+	top: 1.5em;
 	z-index: 99999;
-}
+}/*
 .main-navigation ul ul ul {
 	left: 100%;
 	top: 0;
@@ -469,7 +407,7 @@ a:active {
 }
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
-}
+}*/
 /* Small menu */
 .menu-toggle {
 	cursor: pointer;
@@ -585,34 +523,13 @@ a:active {
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
-
-.widget-area{
-	position:relative;
-	left:5vw;
-	top:1.2vw;
-	background:#ccc;
-	float:left;
-	width:30%;
-}
-.widget-area:before{
-	content:"";
-	position:absolute;
-	width:100%;
-	height:1.2vw;
-	transform:skew(45deg);
-	bottom:100%;
-	right:.6vw;
-	background:#aaa;
-}
-
 .widget {
 	margin: 0 0 1.5em;
-	width:100%;
 }
 
 /* Make sure select elements fit in widgets */
 .widget select {
-	//max-width: 100%;
+	max-width: 100%;
 }
 
 /* Search widget */
@@ -647,32 +564,6 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
-.site-main{
-	width:70%;
-	float:left;
-	position:relative;
-	left:3.8vw;
-	background:#ddd;
-}
-.post{
-	padding:2vw;
-	margin:1vw;
-	background:#eee;
-	position:relative;
-	right:1.2vw;
-	box-shadow:.2vw .2vw .5vw rgba(0,0,0,.3);
-}
-.site-main:before{
-	content:"";
-	position:absolute;
-	height:100%;
-	width:1.2vw;
-	transform:skewY(45deg);
-	top:0;
-	left:100%;
-	background:#bbb;
-	z-index:-1;
 }
 
 /*--------------------------------------------------------------
@@ -778,52 +669,3 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {}
-
-
-/*--------------------------------------------------------------
-12.2 Site-Header
---------------------------------------------------------------*/
-.site-header a{ /* reset*/
-		color:inherit;
-		text-decoration:none;
-}
-.site-header{
-	text-align:center;
-	font-size:2em;
-	margin-bottom:2.4vw;
-}
-.site-title{
-	font-size:3em;
-	padding-top:2em;
-	background:#477;
-	position:relative;
-
-}
-.site-title:after{
-	content:"";
-	width:100%;
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	left:.6vw;
-	top:100%;
-	background:#588;
-
-}
-.site-description{
-	background:rgba(0,0,0,.5);
-	color:rgba(255,255,255,.5);
-	position:relative;
-	left:1.2vw;
-	top:1.2vw;
-}
-.site-description:after{
-	content:"";
-	width:100%;
-	position:absolute;
-	height:1.2vw;
-	transform:skew(45deg);
-	left:.6vw;
-	top:100%;
-	background:rgba(0,0,0,.3);
-}

@@ -1,0 +1,315 @@
+/*
+Theme Name: Sugar Vinegar
+Theme URI: http://housewithinahouse.com
+Author: Edwin Fallwell
+Author URI: http://housewithinahouse.com
+Description: Description
+Version: 0.1-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sugar-vinegar
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ sugar-vinegar is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Accessibility
+7.0 - Alignments
+8.0 - Clearings
+9.0 - Widgets
+10.0 - Content
+	10.1 - Posts and pages
+	10.2 - Asides
+	10.3 - Comments
+11.0 - Infinite scroll
+12.0 - Media
+	12.1 - Captions
+	12.2 - Galleries
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Poster';
+  src: url('/fonts/VelinoPoster-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Prelo';
+    src: url('/fonts/preloslab-book.eot');
+    src: url('/fonts/preloslab-book.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/preloslab-book.woff') format('woff'),
+         url('/fonts/preloslab-book.ttf') format('truetype'),
+         url('/fonts/preloslab-book.svg#prelo_slabbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Prelo';
+    src: url('/fonts/preloslab-light.eot');
+    src: url('/fonts/preloslab-light.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/preloslab-light.woff') format('woff'),
+         url('/fonts/preloslab-light.ttf') format('truetype'),
+         url('/fonts/preloslab-light.svg#prelo_slab_lightlight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+body {
+  background: #eeeeee;
+  color: #111111;
+  font-family: Prelo, arial;
+  width: 80vw;
+  margin: auto 10vw;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+hr{
+	width:95%;
+	color:black;
+	float:left;
+	margin-bottom:1vw;
+
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+  color: #fafffa;
+  font-size: 3vw;
+  background: #448844;
+  margin-bottom: 0;
+  margin-top: .5em;
+  padding-top: .3em;
+  padding-bottom: .1em;
+  text-align: center;
+  font-weight: 100;
+}
+.section-title {
+  font-size: 6vw;
+  padding-top: 4em;
+  background: #224422;
+  margin-top: 0;
+  text-shadow: 2px 2px 1px black,10px 10px 10px black, 5px 5px 5px black, 4px 4px 8px black, 0 0 20px black;
+}
+.site-header {
+  background-image: url(http://june11.org/images/yakushima_forest.jpg);
+  background-size: 100%;
+  width: 80vw;
+  padding-top: 10vw;
+  margin-bottom: 0;
+}
+.site-header h1{
+	font-family: poster;
+  font-size: 8vw;
+  position: relative;
+  top: 0vw;
+  font-weight: normal;
+  color: #fafffa;
+  margin: 0;
+  padding: 0;
+  height: 1em;
+  z-index: 2;
+  padding-left: 1vw;
+}
+.site-header .site-description {
+  position: relative;
+  top: 0vw;
+  padding: 1vw 0;
+  background: #d0ffd0;
+  opacity: .8;
+  margin: 0;
+  text-align: right;
+  font-size: 3vw;
+  line-height: .8em;
+  padding-right: 1vw;
+  font-weight: normal;
+}
+.sub-nav {
+  background: #448844;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-right: 1vw;
+  position: absolute;
+  width: 55vw;
+}
+.sub-nav li {
+  display: inline-block;
+  float: right;
+  padding: .2em .8em;
+  margin: .1em;
+  background: #52a352;
+  font-size: 2vw;
+}
+.sub-nav li:hover {
+  background: #74e774;
+}
+.sub-nav .name {
+  background: #448844;
+  text-align: left;
+  float: right;
+}
+.sub-nav .name:hover {
+  background: #448844;
+}
+.main-navigation {
+  float: right;
+  width: 24vw;
+  margin: 0;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.main-navigation .menu-toggle, .screen-reader-text{
+	display:none;
+}
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+}
+.main-navigation ul li {
+  background: #75ad75;
+  list-style: none;
+  margin: 0;
+  padding: 1vw;
+  font-size: 3.8vw;
+  text-align: right;
+  font-weight: 100;
+}
+.main-navigation ul .current {
+  background: #448844;
+  position: relative;
+}
+.main-navigation ul .current:after {
+  content: "";
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  background: #224422;
+  left: 1vw;
+  top: 1vw;
+}
+.main-navigation ul li:hover {
+  background: #66cc66;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.main-navigation ul .current:hover {
+  background: #448844;
+  text-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+}
+.main-navigation ul ul{
+	display:none;
+}
+.sub-nav-follower {
+  margin: 1vw;
+  height: 2vw;
+}
+.sticky {
+  font-size: 1.1em;
+  text-indent: 1em;
+  background: rgba(0,0,0,0);
+}
+.sticky img {
+  margin: 1em;
+  width: 60%;
+  float: left;
+}
+.sticky .entry-header, .sticky .entry-footer{
+	display:none;
+}
+.sticky .intro {
+  font-size: 1.4em;
+  margin-bottom: .3em;
+  padding-top: 2vw;
+  text-indent: 0;
+}
+.sticky .intro:first-letter {
+  color: #448844;
+  font-weight: bold;
+  display: block;
+  float: left;
+  font-size: 12vw;
+  position: relative;
+  margin-right: 1vw;
+  margin-bottom:1vw;
+}
+.sticky .intro:first-line {
+  font-size: 2em;
+  margin-bottom: 1em;
+  line-height: .7em;
+  font-weight: 100;
+}
+.sticky .pull-quote {
+  font-size: 2em;
+  color: #448844;
+  text-align: right;
+  width: 70%;
+  float: right;
+  margin: 1vw;
+}
+.sticky .last-line {
+  font-size: 2em;
+  color: #448844;
+  text-align: center;
+  float: left;
+  margin: auto 1vw;
+  margin-top: -1vw;
+  margin-bottom:1vw;
+}
+.sticky h3{
+	max-width:50vw;
+	float:left;
+	margin:1vw;
+	padding-right:1vw;
+}
+
+.translation p{
+	display:inline-block;
+	float:left;
+	min-width:1vw;
+	margin:.1vw;
+	padding:0 1vw;
+	text-indent:0;
+	background:#ccc;
+}
+.entry-title{
+	float:left;
+	width:100%;
+	margin:0;
+	text-align:center;
+	padding-top:10vw;
+	//background-image: url(http://june11.org/images/forest.jpg);
+	//background-size:100%;
+  //background-position: bottom left;
+  background:#282;
+  color:white;
+  font-size:6vw;
+  margin-top:1vw;
+  font-weight:100;
+}
